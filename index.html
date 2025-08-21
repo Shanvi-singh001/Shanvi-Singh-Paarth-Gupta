@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background: linear-gradient(to right, #0078D7, #00B294);
+            min-height: 100vh;
+            /* text-shadow: 2px 2px 4px rgba(0,0,0,0.4); */  
+            /* had to remove shadows kyunki footer invisible chahiye '_' */
+        }
+
+        footer a {
+            color: transparent;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-white p-4">
+
+    <main class="text-center flex-grow flex flex-col items-center justify-center">
+        
+        <h1 id="welcome-heading" class="text-2xl md:text-4xl font-bold mb-8 leading-relaxed">Welcome to the Webpage made by team "Shanvi Singh & Paarth Gupta"</h1>
+
+        <a href="https://www.microsoft.com/en-us/surface" target="_blank" rel="noopener noreferrer" class="block shadow-2xl rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <img 
+              src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/surface-pro-11th-edition-black-compare-render-copilot?scl=1" 
+              alt="Microsoft Surface Laptop" 
+              class="w-full max-w-md md:max-w-lg h-auto"
+              onerror="this.onerror=null;this.src='https://placehold.co/600x400/0078D7/FFFFFF?text=Microsoft+Surface';">
+        </a>
+    </main>
+
+    <footer class="w-full text-center p-4">
+        <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-lg">
+            Visit Microsoft
+        </a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const Name = "Shanvi Singh & Paarth Gupta"; 
+            const welcome1 = document.getElementById('welcome-heading');
+            welcome1.textContent = Welcome, ${Name}!;
+
+            console.log("Congrats, you’re closer to the password! 🚀");
+        });
+    </script>
+
+</body>
+</html>
